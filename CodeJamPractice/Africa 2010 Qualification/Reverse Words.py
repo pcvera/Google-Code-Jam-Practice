@@ -1,23 +1,18 @@
 # success in small and large sample inputs
 
+from CodeJamHelper import CodeJamHelper
+
 def main():
-    f = open("C:\Users\Peter\Downloads\B-large-practice.in", "r")
+    h = CodeJamHelper("B-large-practice")    
     
-    n = int(f.readline())
-    o = open("C:\Users\Peter\Desktop\B-large-practice.out", "w")
-    
+    n = h.nextInt()
+
     for x in range(n):
-        output(x+1, process(f.readline()), o)
+        h.output(process(h.nextDelimitedLine()))
 
 def process(line):
-    x = line[:-1].split(" ")
-    x.reverse()
-    return " ".join(x)
+    line.reverse()
+    return " ".join(line)
 
-
-def output(case, outline, o):
-    print "Case #" + str(case) + ": " + str(outline)
-    o.write( "Case #" + str(case) + ": " + str(outline) + "\n")
-    
 if __name__ == "__main__":
     main()

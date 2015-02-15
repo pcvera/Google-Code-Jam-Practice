@@ -4,8 +4,8 @@ class CodeJamHelper:
     """Helper for the common things I do during Google Code Jam"""
     def __init__(self, baseFileName):
         self.ensureDirectory("./output")
-        self.inFile = open("C:\Users\Peter\Downloads\\" + baseFileName + ".in", "r")
-        self.outFile = open("C:\Users\Peter\Desktop\cj2014\\" +baseFileName + ".out", "w")
+        self.inFile = open("./input/" + baseFileName + ".in", "r")
+        self.outFile = open("./output/" + baseFileName + ".out", "w")
         self.caseNum = 1
     
     def ensureDirectory(self, path):
